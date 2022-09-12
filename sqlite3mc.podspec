@@ -35,7 +35,6 @@ CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 s.requires_arc = false
 s.default_subspecs = 'common'
-  s.static_framework = true
 
   s.subspec 'common' do |ss|
 
