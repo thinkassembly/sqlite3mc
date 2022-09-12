@@ -23,7 +23,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/thinkassembly/sqlite3mc.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = 'asdlfkjalsdkfj '
   s.author           = { 'nullrocket' => 'douglas.b.hill@gmail.com' }
   s.source   = { :git => "https://github.com/thinkassembly/sqlite3mc.git" }
   s.prepare_command = <<-CMD
