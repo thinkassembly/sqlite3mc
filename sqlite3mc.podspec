@@ -38,7 +38,7 @@ s.default_subspecs = 'common'
 
   s.subspec 'common' do |ss|
 
-  ss.source_files = "sqlite3.{h,c},./sys/random.h"
+  ss.source_files = "sqlite3.{h,c}"
 
   #ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes #-aes' }
   # Disable OS X / AFP locking code on mobile platforms (iOS, tvOS, watchOS)
