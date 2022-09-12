@@ -27,6 +27,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'nullrocket' => 'douglas.b.hill@gmail.com' }
   s.source   = { :http => "https://github.com/utelle/SQLite3MultipleCiphers/releases/download/v1.5.2/sqlite3mc-1.5.2-sqlite-3.39.3-amalgamation.zip",type: :zip }
   s.prepare_command = <<-CMD
+ls
 mkdir -p sys
 touch ./sys/random.h
 rm sqlite3.h
