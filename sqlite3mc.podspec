@@ -35,7 +35,6 @@ CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 s.requires_arc = false
 s.default_subspecs = 'common'
-  s.module_name = "sqlite3mc"
 s.subspec 'common' do |ss|
 
   ss.source_files = "sqlite3.{h,c},./sys/random.h"
