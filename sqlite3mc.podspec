@@ -45,7 +45,9 @@ s.subspec 'common' do |ss|
   ss.public_header_files = "sqlite3.h,sqlite3ext.h"
   #ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes #-aes' }
   # Disable OS X / AFP locking code on mobile platforms (iOS, tvOS, watchOS)
-  sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0 -maes -isystem=./ ' }
+  sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0 -maes -isystem=./ ' ,
+                          "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/sqlite3mc",
+  }
   ss.ios.pod_target_xcconfig = sqlite_xcconfig_ios
  # ss.tvos.pod_target_xcconfig = sqlite_xcconfig_ios
  # ss.watchos.pod_target_xcconfig = sqlite_xcconfig_ios
