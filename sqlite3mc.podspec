@@ -35,7 +35,9 @@ CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 s.requires_arc = false
 s.default_subspecs = 'common'
-s.subspec 'common' do |ss|
+  s.static_framework = true
+
+  s.subspec 'common' do |ss|
 
   ss.source_files = "sqlite3.{h,c},./sys/random.h"
   #ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes #-aes' }
