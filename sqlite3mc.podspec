@@ -29,6 +29,10 @@ TODO: Add long description of the pod here.
   s.prepare_command = <<-CMD
 mkdir -p sys
 touch ./sys/random.h
+rm sqlite3.h
+rm sqlite3.c
+mv sqlite3mc_amalgamation.h sqlite3.h
+mv sqlite3mc_amalgamation.c sqlite3.c
 
 CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
@@ -37,8 +41,8 @@ s.default_subspecs = 'common'
   s.module_name = "sqlite3mc"
 s.subspec 'common' do |ss|
 
-  ss.source_files = "sqlite3mc_amalgamation.{h,c},./sys/random.h"
-  ss.public_header_files = "sqlite3mc_amalgamation.h,sqlite3ext.h"
+  ss.source_files = "sqlite3.{h,c},./sys/random.h"
+  ss.public_header_files = "sqlite3.h,sqlite3ext.h"
   #ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes #-aes' }
   # Disable OS X / AFP locking code on mobile platforms (iOS, tvOS, watchOS)
   sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0 -maes -isystem=./ ' }
