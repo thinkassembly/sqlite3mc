@@ -30,10 +30,7 @@ TODO: Add long description of the pod here.
 ls
 mkdir -p sys
 touch ./sys/random.h
-rm sqlite3.h
-rm sqlite3.c
-mv sqlite3mc_amalgamation.h sqlite3.h
-mv sqlite3mc_amalgamation.c sqlite3.c
+
 
 CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
