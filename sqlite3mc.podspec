@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   s.prepare_command = <<-CMD
 ls
 mkdir -p sys
+touch ./sys/random.h
 
 CMD
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
