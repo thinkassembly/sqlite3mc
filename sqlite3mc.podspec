@@ -159,8 +159,8 @@ s.default_subspecs = 'common'
   end
 
   # The spellfix1 module not part of the default amalgation
-  s.subspec 'spellfix1' do |ss|
-    ss.dependency 'sqlite3mc/common'
-    ss.source_files = "#{archive_name}/ext/misc/spellfix.c"
-  end
+ # s.subspec 'spellfix1' do |ss|
+ #   ss.dependency 'sqlite3mc/common'
+ #   ss.source_files = "#{archive_name}/ext/misc/spellfix.c"
+ # end
 end
