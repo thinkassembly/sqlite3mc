@@ -44,10 +44,10 @@ s.default_subspecs = 'common'
   s.subspec 'common' do |ss|
     ss.source_files = "sqlite*.{h,c}"
     ss.public_header_files = "sqlite3.h,sqlite3ext.h"
-    ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes -isystem=./ -Wno-strict-prototypes -Wno-shorten-64-to-32 -Wno-ambiguous-macro',
+    ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -maes -isystem=./ -Wno-strict-prototypes -Wno-shorten-64-to-32 -Wno-ambiguous-macro -Wno-unused-variable',
                "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/sqlite3mc" }
     # Disable OS X / AFP locking code on mobile platforms (iOS, tvOS, watchOS)
-    sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0  -maes -isystem=./ -Wno-strict-prototypes -Wno-shorten-64-to-32 -Wno-ambiguous-macro',                               "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/sqlite3mc"
+    sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0  -maes -isystem=./ -Wno-strict-prototypes -Wno-shorten-64-to-32 -Wno-ambiguous-macro -Wno-unused-variable',                               "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/sqlite3mc"
      }
     ss.ios.pod_target_xcconfig = sqlite_xcconfig_ios
     ss.tvos.pod_target_xcconfig = sqlite_xcconfig_ios
