@@ -40,7 +40,6 @@ s.default_subspecs = 'common'
 
 
 
-
   s.subspec 'common' do |ss|
     ss.source_files = "sqlite*.{h,c}"
     ss.public_header_files = "sqlite3.h,sqlite3ext.h"
